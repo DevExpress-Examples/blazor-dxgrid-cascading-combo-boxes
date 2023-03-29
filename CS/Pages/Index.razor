@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @implements IDisposable
 
 @using Microsoft.EntityFrameworkCore
@@ -68,22 +68,21 @@
     </EditFormTemplate>
 </DxGrid>
 
-@code {    
+@code {
     NorthwindContext Northwind { get; set; }
     WorldCitiesContext WorldCities { get; set; }
-
+    TaskCompletionSource<bool> DataLoadedTcs { get; } = new(TaskCreationOptions.RunContinuationsAsynchronously);
     IEnumerable<Supplier> Data { get; set; }
     IEnumerable<Country> Countries { get; set; }
     IEnumerable<City> Cities { get; set; }
 
     protected override async Task OnInitializedAsync() {
-
         Northwind = NorthwindContextFactory.CreateDbContext();
         WorldCities = WorldCitiesContextFactory.CreateDbContext();
-
         Data = await Northwind.Suppliers.ToListAsync();
         Countries = await WorldCities.Countries.ToListAsync();
         Cities = await WorldCities.Cities.ToListAsync();
+        DataLoadedTcs.TrySetResult(true);
     }
     void Grid_CustomizeEditModel(GridCustomizeEditModelEventArgs e) {
         if (e.IsNew) {
@@ -123,7 +122,8 @@
         }
     }
     public void Dispose() {
+        DataLoadedTcs.TrySetCanceled();
         Northwind?.Dispose();
-        WorldCities?.Dispose();
+        WorldCities?.Dispose();        
     }
 }
