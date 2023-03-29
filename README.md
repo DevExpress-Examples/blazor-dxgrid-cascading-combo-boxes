@@ -10,7 +10,7 @@ This example demonstrates how to implement cascading combo boxes in the edit for
 
 In the example, the Grid's edit form displays the **Country** and **City** cascading [combo boxes](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2). The **Country** combo box is bound to a constant list of countries, while the **City** combo box is bound to a dynamically generated list of cities. Values of the combo boxes are bound to the edit model's `Country` and `City` fields respectfully.
 
-Once you change the [Value](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.Value) of the **Country** combo box, the [ValueChanged](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.ValueChanged) event occurs. The event handler assigns the new value to the edit model's `Country` field, and sets the `City` field value to `null`. The Grid generates a list of the cities that are in the selected country, and assigns the list to the [Data](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.Data) property of the **City** combo box.
+Once you change the [Value](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.Value) of the **Country** combo box, the [ValueChanged](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.ValueChanged) event occurs. The event handler assigns the new value to the edit model's `Country` field, and sets the `City` field value to `null`. The example's code generates a list of the cities that are in the selected country, and assigns the list to the [Data](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2.Data) property of the **City** combo box.
 
 ## Files to Look At
 
