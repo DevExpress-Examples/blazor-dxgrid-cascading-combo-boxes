@@ -27,16 +27,16 @@
         }
         <DxFormLayout CssClass="w-100">
             <DxFormLayoutItem Caption="Company Name:" ColSpanMd="6">
-                <DxTextBox @bind-Text="@supplier.CompanyName" />
+                @EditFormContext.GetEditor("CompanyName")
             </DxFormLayoutItem>
             <DxFormLayoutItem Caption="Contact Name:" ColSpanMd="6">
-                <DxTextBox @bind-Text="@supplier.ContactName" />
+                @EditFormContext.GetEditor("ContactName")
             </DxFormLayoutItem>
             <DxFormLayoutItem Caption="Contact Title:" ColSpanMd="6">
-                <DxTextBox @bind-Text="@supplier.ContactTitle" />
+                @EditFormContext.GetEditor("ContactTitle")
             </DxFormLayoutItem>
             <DxFormLayoutItem Caption="Phone:" ColSpanMd="6">
-                <DxTextBox @bind-Text="@supplier.Phone" />
+                @EditFormContext.GetEditor("Phone")
             </DxFormLayoutItem>
             <DxFormLayoutItem Caption="Country:" ColSpanMd="6">
                 <DxComboBox Data="@Countries"
