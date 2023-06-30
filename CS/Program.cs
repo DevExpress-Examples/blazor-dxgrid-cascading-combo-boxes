@@ -16,13 +16,13 @@ builder.Services.AddDevExpressBlazor(options => {
 });
 builder.Services.AddDbContextFactory<WorldCitiesContext>((sp, options) => {
     var env = sp.GetRequiredService<IWebHostEnvironment>();
-    var dbPath = Path.Combine(env.ContentRootPath, "WorldCities.mdf");
-    options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=" + dbPath);
+    var dbPath = Path.Combine(env.ContentRootPath, "worldcities.db");
+    options.UseSqlite("Data Source=" + dbPath);
 });
 builder.Services.AddDbContextFactory<NorthwindContext>((sp, options) => {
     var env = sp.GetRequiredService<IWebHostEnvironment>();
-    var dbPath = Path.Combine(env.ContentRootPath, "Northwind.mdf");
-    options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=" + dbPath);
+    var dbPath = Path.Combine(env.ContentRootPath, "Northwind.db");
+    options.UseSqlite("Data Source=" + dbPath);
 });
 builder.WebHost.UseWebRoot("wwwroot");
 builder.WebHost.UseStaticWebAssets();
