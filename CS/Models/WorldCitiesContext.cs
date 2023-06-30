@@ -14,9 +14,6 @@ public partial class WorldCitiesContext : DbContext {
     public virtual DbSet<Country> Countries { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-        if (!optionsBuilder.IsConfigured) {
-            optionsBuilder.UseSqlServer("Server=.\\sqlexpress;Database=WorldCities;Integrated Security=true");
-        }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
