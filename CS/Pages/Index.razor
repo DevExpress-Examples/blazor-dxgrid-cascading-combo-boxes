@@ -95,12 +95,7 @@
         var dataItem = e.IsNew ? new Supplier() : Northwind.Suppliers.Find(editModel.SupplierId);
         // Assign changes from the edit model to the data item.
         if (dataItem != null) {
-            dataItem.CompanyName = editModel.CompanyName;
-            dataItem.ContactName = editModel.ContactName;
-            dataItem.ContactTitle = editModel.ContactTitle;
-            dataItem.Phone = editModel.Phone;
-            dataItem.Country = editModel.Country;
-            dataItem.City = editModel.City;
+            e.CopyChangesToDataItem();
             // Post changes to the database.
             if (e.IsNew)
                 await Northwind.AddAsync(dataItem);
