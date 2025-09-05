@@ -26,7 +26,7 @@ Once you change the [Value](https://docs.devexpress.com/Blazor/DevExpress.Blazor
 
 ## Documentation
 
-- [Cascading Combo Boxes](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxComboBox-2#cascading-comboboxes)
+- [Cascading Combo Boxes](https://docs.devexpress.com/Blazor/405363/components/data-editors/combobox/cascading-combobox)
 - [Grid - Edit Data and Validate Input](https://docs.devexpress.com/Blazor/403454/grid/edit-data-and-validate-input)
 
 ## More Examples
