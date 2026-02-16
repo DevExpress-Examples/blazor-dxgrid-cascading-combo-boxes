@@ -34,7 +34,7 @@ Once you change the [Value](https://docs.devexpress.com/Blazor/DevExpress.Blazor
 - [Bind the Grid to data with Entity Framework Core](https://github.com/DevExpress-Examples/blazor-dxgrid-bind-to-data-with-entity-framework-core)
 - [Create a Foreign Key (ComboBox) Column](https://github.com/DevExpress-Examples/blazor-grid-foreignkey-column)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-grid-cascading-combo-boxes&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-grid-cascading-combo-boxes&~~~was_helpful=no)
 
